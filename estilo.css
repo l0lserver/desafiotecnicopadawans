@@ -1,0 +1,64 @@
+.caixa-mobile {
+    max-width: 480px;
+    margin: auto;
+    background-color: rgb(94, 22, 116);
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .topo {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .topo #meuslinks {
+    display: none;
+  }
+  
+  .topo a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topo a.icone {
+    background: black;
+    display: block;
+    position: absolute;
+    padding: 24px 24px;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .ativo {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .hamburguer {
+    position: absolute;
+    height: 22px;
+    width: 40px;
+    top: 12px;
+    left: 4px;
+
+  }
+
+  .frame {
+    position: relative;
+    left: 100px;
+    top: 120px;
+    height:40px;
+    object-fit: cover;
+    
+  
+  }
