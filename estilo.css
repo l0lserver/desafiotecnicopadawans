@@ -40,7 +40,7 @@
   }
   
   .ativo {
-    background-color: #4CAF50;
+    background-color: #2b922b;
     color: white;
   }
 
@@ -61,4 +61,17 @@
     object-fit: cover;
     
   
+  }
+  .voltar {
+    position: relative;
+    color: blue;
+    left: 40cm;
+    
+  }
+
+  .submenu {
+    position: relative;
+    font-weight: bolder;
+    left: 640px;
+    top: 25px;
   }
