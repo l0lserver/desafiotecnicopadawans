@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+        border-collapse: collapse;
+        margin: 100px;
+    }
+
+    table, td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+        table td.crossed {
+            background-image: linear-gradient(to bottom right, transparent calc(50% - 1px), red, transparent calc(50% + 1px));
+        }
+</style>
+</head>
+<body>
+<table class="table table-bordered" id= "teste">
+  <thead>
+    <tr>
+      <th scope="col">userId</th>
+      <th scope="col">id</th>
+      <th scope="col">title</th>      
+    </tr>
+  </thead>
+  <tbody >
+  </tbody>
+</table>
+
+<script>
+
+window.onload = initPage;
+
+function initPage(){
+	var response = JSON.parse(httpGet());
+	
+	for (var i = 1; i < response.length; i++) {
+		var counter = response[i];
+		console.log(counter);
+		populartabela(counter, i)
+	}
+}
+
+
+function httpGet()
+		{
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open( "GET", "http://jsonplaceholder.typicode.com/albums", false ); // false for synchronous request
+			xmlHttp.send( null );
+			return xmlHttp.responseText;
+		}
+
+
+function populartabela(item, position) {
+  var table = document.getElementById("teste");
+  var row = table.insertRow(position)
+  
+ row.insertCell(0).innerHTML = item.userId;
+ row.insertCell(1).innerHTML = item.id;
+ row.insertCell(2).innerHTML = item.title;
+
+}
+
+
+</script>
+</body>
+</html>
